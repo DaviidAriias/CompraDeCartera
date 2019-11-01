@@ -63,6 +63,7 @@ img {
   width: 100%;
   max-width: 850px;
   position: relative;
+  min-height: 100vh;
   overflow-y: auto;
   padding-bottom: 3%;
   text-align: center; }
