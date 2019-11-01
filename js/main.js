@@ -26,10 +26,16 @@ function readyDoc(){
     //Canguro
     $('#open_modal-cang').click(function(){
         $('.contCanguroMain').addClass('is--ShowedCanguro');
+        $("html, body").animate({ 
+            scrollTop: $('html, body').get(0).scrollHeight 
+        }, 2000); 
     });
     $('.close_modal-cang').click(function(){
         $('.contCanguroMain').removeClass('is--ShowedCanguro');
     });
+
+
+    
 
     //CanguroLite
     $('#checkbox1').on( 'change', function() {
