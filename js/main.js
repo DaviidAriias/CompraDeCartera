@@ -28,7 +28,7 @@ function readyDoc(){
         $('.contCanguroMain').addClass('is--ShowedCanguro');
         $("html, body").animate({ 
             scrollTop: $('html, body').get(0).scrollHeight 
-        }, 2000); 
+        }, 100); 
     });
     $('.close_modal-cang').click(function(){
         $('.contCanguroMain').removeClass('is--ShowedCanguro');
@@ -46,7 +46,7 @@ function readyDoc(){
             $('.contCanguroMain').addClass('is--ShowedCanguro');
             $("html, body").animate({ 
                 scrollTop: $('html, body').get(0).scrollHeight 
-            }, 2000); 
+            }, 100); 
         } else {
             $('.dinamicOne').hide();
             $('.canguroLite').removeClass('is--ShowedCanguroLite');
@@ -64,7 +64,7 @@ function readyDoc(){
             $('.contCanguroMain').addClass('is--ShowedCanguro');
             $("html, body").animate({ 
                 scrollTop: $('html, body').get(0).scrollHeight 
-            }, 2000);   
+            }, 100);   
         } else {
             $('.dinamicTwo').hide();
             $('.canguroLite').removeClass('is--ShowedCanguroLite');
@@ -81,7 +81,7 @@ function readyDoc(){
             $('.contMainApp').addClass('contMainApp-fluidCanguroLite');
             $("html, body").animate({ 
                 scrollTop: $('html, body').get(0).scrollHeight 
-            }, 2000);   
+            }, 100);   
         } else {
             $('.dinamicThree').hide();
             $('.canguroLite').removeClass('is--ShowedCanguroLite');
@@ -98,7 +98,7 @@ function readyDoc(){
             $('.contMainApp').addClass('contMainApp-fluidCanguroLite');
             $("html, body").animate({ 
                 scrollTop: $('html, body').get(0).scrollHeight 
-            }, 2000);   
+            }, 100);   
         } else {
             $('.dinamicFour').hide();
             $('.canguroLite').removeClass('is--ShowedCanguroLite');
@@ -115,7 +115,7 @@ function readyDoc(){
             $('.contMainApp').addClass('contMainApp-fluidCanguroLite');
             $("html, body").animate({ 
                 scrollTop: $('html, body').get(0).scrollHeight 
-            }, 2000);   
+            }, 100);   
         } else {
             $('.dinamicFive').hide();
             $('.canguroLite').removeClass('is--ShowedCanguroLite');
@@ -132,7 +132,7 @@ function readyDoc(){
             $('.contMainApp').addClass('contMainApp-fluidCanguroLite');
             $("html, body").animate({ 
                 scrollTop: $('html, body').get(0).scrollHeight 
-            }, 2000);   
+            }, 100);   
         } else {
             $('.canguroLite').removeClass('is--ShowedCanguroLite');
             setTimeout(function() {
