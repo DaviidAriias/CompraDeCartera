@@ -43,6 +43,10 @@ function readyDoc(){
             $('.dinamicOne').show();
             $('.canguroLite').addClass('is--ShowedCanguroLite');
             $('.contMainApp').addClass('contMainApp-fluidCanguroLite');
+            $('.contCanguroMain').addClass('is--ShowedCanguro');
+            $("html, body").animate({ 
+                scrollTop: $('html, body').get(0).scrollHeight 
+            }, 2000); 
         } else {
             $('.dinamicOne').hide();
             $('.canguroLite').removeClass('is--ShowedCanguroLite');
@@ -57,6 +61,10 @@ function readyDoc(){
             $('.dinamicTwo').show();
             $('.canguroLite').addClass('is--ShowedCanguroLite');
             $('.contMainApp').addClass('contMainApp-fluidCanguroLite');
+            $('.contCanguroMain').addClass('is--ShowedCanguro');
+            $("html, body").animate({ 
+                scrollTop: $('html, body').get(0).scrollHeight 
+            }, 2000);   
         } else {
             $('.dinamicTwo').hide();
             $('.canguroLite').removeClass('is--ShowedCanguroLite');
@@ -71,6 +79,9 @@ function readyDoc(){
             $('.dinamicThree').show();
             $('.canguroLite').addClass('is--ShowedCanguroLite');
             $('.contMainApp').addClass('contMainApp-fluidCanguroLite');
+            $("html, body").animate({ 
+                scrollTop: $('html, body').get(0).scrollHeight 
+            }, 2000);   
         } else {
             $('.dinamicThree').hide();
             $('.canguroLite').removeClass('is--ShowedCanguroLite');
@@ -85,6 +96,9 @@ function readyDoc(){
             $('.dinamicFour').show();
             $('.canguroLite').addClass('is--ShowedCanguroLite');
             $('.contMainApp').addClass('contMainApp-fluidCanguroLite');
+            $("html, body").animate({ 
+                scrollTop: $('html, body').get(0).scrollHeight 
+            }, 2000);   
         } else {
             $('.dinamicFour').hide();
             $('.canguroLite').removeClass('is--ShowedCanguroLite');
@@ -99,6 +113,9 @@ function readyDoc(){
             $('.dinamicFive').show();
             $('.canguroLite').addClass('is--ShowedCanguroLite');
             $('.contMainApp').addClass('contMainApp-fluidCanguroLite');
+            $("html, body").animate({ 
+                scrollTop: $('html, body').get(0).scrollHeight 
+            }, 2000);   
         } else {
             $('.dinamicFive').hide();
             $('.canguroLite').removeClass('is--ShowedCanguroLite');
@@ -113,6 +130,9 @@ function readyDoc(){
         if( $(this).is(':checked') ) {
             $('.canguroLite').addClass('is--ShowedCanguroLite');
             $('.contMainApp').addClass('contMainApp-fluidCanguroLite');
+            $("html, body").animate({ 
+                scrollTop: $('html, body').get(0).scrollHeight 
+            }, 2000);   
         } else {
             $('.canguroLite').removeClass('is--ShowedCanguroLite');
             setTimeout(function() {
