@@ -2000,7 +2000,6 @@ form .input .dinamicCheckboxContainer {
   form .input .dinamicCheckboxContainer .dinamicCheckbox {
     padding: 0px;
     margin-bottom: 0;
-    overflow: hidden;
     transition-duration: .2s; }
     form .input .dinamicCheckboxContainer .dinamicCheckbox .text {
       padding-left: 30px; }
