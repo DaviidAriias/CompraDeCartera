@@ -1,0 +1,246 @@
+// Mixins
+
+// Keyframes - animación
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+      @content;
+    }
+    @-moz-keyframes #{$name} {
+      @content;
+    }
+    @-ms-keyframes #{$name} {
+      @content;
+    }
+    @keyframes #{$name} {
+      @content;
+    }
+}
+
+// Border Radius
+@mixin border-radius($bord_left,$bord_right,$bord_down_left,$bord_down_right){
+    -webkit-border-radius: $bord_left $bord_right $bord_down_left $bord_down_right;
+    -moz-border-radius: $bord_left $bord_right $bord_down_left $bord_down_right;
+    -ms-border-radius: $bord_left $bord_right $bord_down_left $bord_down_right;
+    border-radius: $bord_left $bord_right $bord_down_left $bord_down_right;
+}
+
+// Placeholder
+@mixin placeholder {
+    ::-webkit-input-placeholder {@content}
+    :-moz-placeholder           {@content}
+    ::-moz-placeholder          {@content}
+    :-ms-input-placeholder      {@content}
+}
+
+// Transition
+@mixin transition($transition) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
+// Font - Face
+@mixin font-face($style-name, $file, $family, $category:"") {
+  $filepath: "../fonts/" + $family + "/" + $file;
+  @font-face {
+    font-family: "#{$style-name}";
+    src: url($filepath + ".eot");
+    src: url($filepath + ".eot?#iefix") format('embedded-opentype'), url($filepath + ".woff") format('woff'), url($filepath + ".ttf")  format('truetype'), url($filepath + ".svg#" + $style-name + "") format('svg');
+  }
+  %#{$style-name} {
+    font: {
+      @if $category != "" {
+        family: "#{$style-name}", #{$category};
+      }
+      @else {
+        family: "#{$style-name}";
+        weight: normal;
+      }
+    }
+  }
+}
+
+@mixin font-face-new($style-name, $file, $category:"") {
+  $filepath: "../fonts/" + $file;
+  @font-face {
+    font-family: "#{$style-name}";
+    src: url($filepath + '.woff2') format('woff2'),
+    url($filepath + '.woff') format('woff');
+  }
+  %#{$style-name} {
+    font: {
+      @if $category != "" {
+        family: "#{$style-name}", #{$category};
+      }
+      @else {
+        family: "#{$style-name}";
+        weight: normal;
+      }
+    }
+  }
+}
+
+// Filtro Background's
+@mixin capa_negra($r,$g,$b,$a){
+    background-color: rgba($r,$g,$b,$a);
+    background-blend-mode: overlay;
+}
+
+// Centrar Objetos
+@mixin centrar_y{
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+@mixin centrar_X{
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+@mixin centrar{
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+}
+@mixin no_transform{
+    position: relative;
+    left: inherit;
+    top: inherit;
+    bottom: 0;
+    transform: translate(0,0);
+    -webkit-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+}
+@mixin no_absolute_center{
+    position: relative;
+    left: inherit;
+    top: inherit;
+    bottom: 0;
+    transform: translate(0,0);
+    -webkit-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+}
+@mixin no_absolute_center{
+    position: relative;
+    left: inherit;
+    top: inherit;
+    bottom: 0;
+    transform: translate(0,0);
+    -webkit-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+}
+
+// Rotar objeto
+@mixin rotar ($deg){
+    -ms-transform: rotate($deg);
+    -o-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    -webkit-transform: rotate($deg);
+    transform: rotate($deg);
+}
+
+// Responsive - Breakpoints
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: 45em ) { @content ; }
+  }
+  @else if $point == biglaptop {
+    @media (max-width: 91em)  { @content ; }
+  }
+  @else if $point == laptop {
+    @media (max-width: 70em)  { @content ; }
+  }
+  @else if $point == tablet {
+    @media (max-width: 64em) { @content ; }
+  }
+  @else if $point == phablet {
+    @media (max-width: 50em)   { @content ; }
+  }
+  @else if $point == mobileonly {
+    @media (max-width: 45em)  { @content ; }
+  }
+  @else if $point == mobileland {
+    @media (max-width: 43em) and  (orientation: landscape) { @content ; }
+  }
+}
+
+//Opacidad
+@mixin opacities($opacity, $op_n){
+  background-color: $opacity;
+  background-color: rgba($opacity, $op_n);
+}
+
+// Placeholder
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}
+
+@mixin disableAutoFill {
+    -webkit-box-shadow: 0 0 0px 9999px white inset !important;
+}
+/// Change background color
+@mixin backgroundColorAutoFill($backgroundColor) {
+    -webkit-box-shadow: 0 0 0px 9999px $backgroundColor inset;
+}
+/// Change text color
+@mixin textColorAutoFill($color) {
+    -webkit-text-fill-color: $color !important;
+}
+/// Change background color on hover
+@mixin hoverBackgroundColorAutoFill($backgroundColor) {
+    &:hover, &:focus {
+      -webkit-box-shadow: 0 0 0px 9999px $backgroundColor inset !important;
+    }
+}
+/// Change text color on hover
+@mixin hoverTextColorAutoFill($color) {
+    &:hover, &:focus {
+      -webkit-text-fill-color: $color !important;
+    }
+}
+
+// Convert REM to PX
+$base-font-num: 100; //Base font-size
+$base-font: $base-font-num * 1%; //Base font-size add percentage !Do not modify
+$rem-base: 16; // Base font size for setting REM units. Default: 16
+
+//REM value in pixels !Do not modify
+$rem-value: $rem-base + px;
+
+// Convert px size to rem 
+@function size($pixel) {
+  @return ($pixel / $rem-base) + rem;
+}
+
+// Text Shorten
+@mixin text-shorten {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+}
+
+//Oscurecer 
+@function darken($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+//Aclarar
+@function lighten($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}

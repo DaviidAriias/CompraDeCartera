@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <!--  Default Styles  -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title> Davivienda S.A. </title>
+</head>
+
+<body>
+    <section class="contMainApp gray">
+        <a href="javascript:void(0)" class="btnBack">
+            <img src="../images/icon-dv-btnback.svg" alt="Atrás">
+            Atrás
+        </a>
+
+        <!--dataNav inicio - clases: active y complete -->
+        <div class="contNavTracking">
+            <div class="dataNav tracking">
+                <div class="dataNav container">
+                    <a href="javascript:void(0)" class="dataNav step complete"></a>
+                    <a href="javascript:void(0)" class="dataNav step complete"></a>
+                    <a href="javascript:void(0)" class="dataNav step complete"></a>
+                    <a href="javascript:void(0)" class="dataNav step complete"></a>
+                </div>
+            </div>
+        </div>
+        <!-- dataNavn fin -->
+    
+        <div class="contBox">
+            <div class="container">
+                <h1 class="main no-mrgn-top big">Marque las siguientes opciones para continuar con el proceso</h1>
+                <form action="">
+                    <div class="input">
+                        <label class="tyc gray">
+                            Manifiesto que he leído y acepto firmar el <a href="javascript:void(0)">Pagaré</a>.
+                            <input type="checkbox">
+                            <div class="indicator"></div>
+                        </label>
+                    </div>
+                    <div class="input">
+                        <label class="tyc gray">
+                            Manifiesto que he leído y acepto el contenido del  <a href="javascript:void(0)">Contrato Compra Cartera Móvil</a>.
+                            <input type="checkbox">
+                            <div class="indicator"></div>
+                        </label>
+                    </div>
+                    <div class="input">
+                        <label class="tyc gray">
+                            Manifiesto que he leído y acepto firmar la <a href="javascript:void(0)">Declaración de asegurabilidad</a>.
+                            <input type="checkbox">
+                            <div class="indicator"></div>
+                        </label>
+                    </div>
+                    <div class="input">
+                        <label class="tyc gray">
+                            Manifiesto que he leído y acepto firmar la <a href="javascript:void(0)">autorización</a> para el desembolso en cheque de cada obligación comprada.
+                            <input type="checkbox">
+                            <div class="indicator"></div>
+                        </label>
+                    </div>
+                    <div class="input">
+                        <label class="tyc gray">
+                            Autorizo a Davivienda a <a href="javascript:void(0)" class="btnTooltip text">debitar automáticamente</a> la cuota de mi crédito de la cuenta seleccionada para el desembolso.
+                            <input type="checkbox">
+                            <div class="indicator"></div>
+                            <div class="tooltip top">
+                                <p>
+                                    La cuota mensual de su crédito será debitada automáticamente de la cuenta
+                                    que usted seleccione para este fin. <br>
+                                    En caso de no contar con recursos en la cuenta autorizada, Davivienda debitará
+                                    los recursos de otras cuentas o depósitos que posea a su nombre con el Banco.
+                                </p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="input altern no-padding">
+                        <label for="cuenta-desembolso">Autorizo a Davivienda a debitar automáticamente la cuota de mi crédito de la cuenta:</label>
+                        <select name="" id="cuenta-desembolso">
+                            <option value="-1" selected disabled> </option>
+                            <option value="1">Opción 1</option>
+                            <option value="2">Opción 2</option>
+                            <option value="3">Opción 3</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="contTextInformation">
+            <p class="text-description">Si está de acuerdo con los documentos seleccione <strong>“Continuar”</strong>.</p>
+        </div>
+        <div class="contBtn">
+            <button type="button" class="btnSuccess btnSuccess--regresar">Regresar</button>
+            <button type="button" class="btnSuccess active">Continuar</button>
+        </div>
+
+    </section>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

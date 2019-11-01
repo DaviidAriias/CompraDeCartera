@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <!--  Default Styles  -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="../css/utils/rangeSlider/rangeslider.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title> Davivienda S.A. </title>
+</head>
+
+<body>
+    <section class="contMainApp gray">
+        <a href="javascript:void(0)" class="btnBack">
+            <img src="../images/icon-dv-btnback.svg" alt="Atrás">
+            Atrás
+        </a>
+        
+        <div class="contBox">
+            <div class="container containerConfir">
+                <div class="resultConfir">
+                    <div class="result whiteCompraCartera">
+                        <span>Valor total obligaciones seleccionadas:</span>
+                        <strong>$13.000.000</strong>
+                    </div>
+                </div>
+                <form action="">
+                    <div class="input inputSlider">
+                        <label for="">Seleccione el plazo del crédito:</label>
+                        <div class="contTextQuantity-n"><span>1</span><span>60</span></div>
+                        <div class="rangeControl">
+                            <input id="inputRange" type="range" min="1" max="60" value="0" data-thumbwidth="0">
+                            <output name="rangeVal">0</output>
+                        </div>
+                        <div class="contTextQuantity"><span>Mes</span><span>Meses</span></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="contBtn">
+            <button type="button" class="btnSuccess btnSuccess--regresar">Regresar</button>
+            <button type="button" class="btnSuccess active">Simular crédito</button>
+        </div>
+    </section>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/range.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

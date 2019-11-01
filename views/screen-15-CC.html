@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <!--  Default Styles  -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title> Davivienda S.A. </title>
+</head>
+
+<body>
+    <section class="contMainApp gray">
+        <!--dataNav inicio - clases: active y complete -->
+        <div class="contNavTracking">
+            <div class="dataNav tracking">
+                <div class="dataNav container">
+                    <a href="javascript:void(0)" class="dataNav step complete"></a>
+                    <a href="javascript:void(0)" class="dataNav step complete"></a>
+                    <a href="javascript:void(0)" class="dataNav step"></a>
+                    <a href="javascript:void(0)" class="dataNav step"></a>
+                </div>
+            </div>
+        </div>
+        <!-- dataNavn fin -->
+
+        <div class="contBox">
+            <div class="container containerConfir">
+                <div class="alert center margin-bottom">
+                    <img src="../images/icon-dv-finalcheck.svg" class="ico" alt="Alerta">
+                    <p>
+                        Su compra de cartera fue aprobada por un valor menor.
+                    </p>
+                </div>
+
+                <div class="resultConfir">
+                    <div class="result result--dark">
+                        <span>Valor aprobado:</span>
+                        <strong>$20.000.000</strong>
+                    </div>
+                    <div class="result">
+                        <span>Valor total crédito con 4x1.000:</span>
+                        <strong>$21.201.925</strong>
+                    </div>
+                    <div class="result">
+                        <span>Plazo del crédito:</span>
+                        <strong>20 meses</strong>
+                    </div>
+                    <div class="result">
+                        <span>Tasa de interés:</span>
+                        <strong>1.7% MV (22.42% EA)</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contTextInformation">
+            <p class="text-description textBig">
+                <strong>¿Desea aceptar la oferta y continuar con la selección de las obligaciones a comprar?</strong>
+            </p>
+        </div>
+        <div class="contBtn">
+            <button type="button" class="btnSuccess" id="open_modal">Cancelar</button>
+            <button type="button" class="btnSuccess active">Aceptar</button>
+        </div>
+
+    </section>
+
+    <section class="modalOverlay" id="modalDefault">
+        <div class="modal">
+            <div class="modalBody">
+                <p>
+                    <strong class="title">
+                        ¿Esta seguro que desea cancelar la solicitud?
+                    </strong> <br>
+                    Tenga en cuenta que se cancelará la solicitud actual.
+                </p>
+            </div>
+            <div class="contBtn">
+                <button type="button" class="btnSuccess" id="close_modal">Cancelar</button>
+                <button type="button" class="btnSuccess active">Continuar</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>

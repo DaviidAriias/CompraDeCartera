@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <!--  Default Styles  -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="../css/utils/rangeSlider/rangeslider.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title> Davivienda S.A. </title>
+</head>
+
+<body>
+    <section class="contMainApp gray">
+        <a href="javascript:void(0)" class="btnBack">
+            <img src="../images/icon-dv-btnback.svg" alt="Atrás">
+            Atrás
+        </a>
+
+        <div class="contBox">
+            <div class="container containerConfir">
+                <div class="resultConfir">
+                    <div class="result whiteCompraCartera whiteCompraCartera-noBg padTooltip">
+                        <span>Valor total obligaciones seleccionadas:</span>
+                        <strong>$13.000.000</strong>
+                        <a href="javascript:void(0)" class="btnTooltip"><img src="../images/icon-dv-infotooltip.svg"
+                                alt=""></a>
+                        <div class="tooltip top">
+                            <p>
+                                El valor total del crédito comprende el valor de las obligaciones a comprar adicionando
+                                el valor del impuesto del 4x1.000 correspondiente al desembolso en cheque a nombre de
+                                cada entidad financiera donde usted tiene las obligaciones a comprar. <br>
+                                Valor total del crédito con 4x1000: $XX.XXX <br>
+                                Valor 4x1000: $XX.XXX
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <form action="">
+                    <div class="input inputSlider">
+                        <label for="">Seleccione el plazo del crédito:</label>
+                        <div class="contTextQuantity-n"><span>1</span><span>60</span></div>
+                        <div class="rangeControl">
+                            <input id="inputRange" type="range" min="1" max="60" value="20" data-thumbwidth="0" disabled>
+                            <output name="rangeVal">0</output>
+                        </div>
+                        <div class="contTextQuantity"><span>Mes</span><span>Meses</span></div>
+                    </div>
+
+                    <div class="input simulacionContainerMain">
+                        <div class="boxSimulacion">
+                            <p>Cuota mensual aproximada</p>
+                            <p>$793.000</p>
+
+                            <a href="javascript:void(0)" class="btnTooltip"><img src="../images/icon-dv-infotooltip.svg" alt=""></a>
+                            <div class="tooltip">
+                                <p>
+                                    Este valor corresponde a la cuota mensual aproximada que tendrá su crédito, la cual se compone de capital, intereses y
+                                    seguros.
+                                    <br><br>
+                                    El Seguro de vida tiene un valor de $XXX.XXX por cada millón de pesos del valor del crédito.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input result-simulacionContainerMain">
+                        <p>Tasa de interés <strong>1,83% MV ( 24,31% EA)</strong></p> 
+                        <div class="txt">
+                            <span>Valor total unificado <strong>12,96%</strong></span>
+                            <a href="javascript:void(0)" class="btnTooltip"><img src="../images/icon-dv-infotooltip.svg" alt=""></a>
+                            <div class="tooltip more-top">
+                                <p>
+                                    Este valor resulta de la sumatoria proyectada de capital, intereses y seguros que serán pagados a Davivienda durante el
+                                    número de cuotas que seleccionó para pagar el crédito.
+                                    <br><br>
+                                    - Capital: $XXX.XXX <br>
+                                    - Intereses: $XXX.XXX <br>
+                                    - Seguros: $XXX.XXX <br>
+                                    <br>
+                                    Este valor es susceptible de disminución en los casos de pago anticipado parcial o total del crédito.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="contBtn">
+            <button type="button" class="btnSuccess">Nueva simulación</button>
+            <button type="button" class="btnSuccess active">Solicitar crédito</button>
+        </div>
+    </section>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/range.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

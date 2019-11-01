@@ -1,0 +1,485 @@
+@import 'admin/admin';
+///<reference path="_admin.scss" />
+
+@import 'admin/mixins';
+///<reference path="_mixins.scss" />
+
+/* PC */
+@media (max-width: 91em) {
+    body{
+//        background-color: rgba(255, 0, 0, 0.35);
+    }
+}
+
+/* laptop */
+@media (max-width: 70em) {
+    body{
+//        background-color: rgba(0, 100, 0, 0.46);
+    }
+}
+
+/* Tablet */
+@media (max-width: 64em) {
+    body{
+//        background-color: rgba(139, 69, 19, 0.54);
+    }
+}
+
+/* Phablet */
+@media (max-width: 50em) {
+    body{
+//        background-color: rgba(244, 164, 96, 0.64);
+        background-color: #ededed;
+    }
+
+    h1, h2, label, p, strong, span, input, select, a{
+        font-size: 14px !important;
+    }
+
+
+    .alert{
+        p{
+            strong{
+                font-size: $font-p + 3 !important;
+                &.small{
+                    font-size: $font-p !important;
+                }
+            }
+        }
+    }
+    
+    .headerConfirm{
+        strong{
+            font-weight: bold;
+            font-size: $font-p + 2 !important;
+        }
+    }
+
+    .atencion{
+        span{
+            font-size: 14px !important;
+        }
+    }
+    
+    .tag-container{
+        .alias{
+            font-size: 18px !important;
+        }
+        .placa{
+            font-size: 25px !important;
+        }
+    }
+    
+    .container{
+        &.container-menu{
+            .item{
+                .data-caption {
+                    h2{
+                        font-size: 30px !important;
+                    }
+                    p{
+                        font-size: 15px !important;
+                    }
+                }
+            }
+        }
+        &.containerTextTyc {
+            p{
+                span, strong{
+                    font-size: $font-p !important;
+                    &.tiny{
+                        opacity: .7;
+                        //font-size: $font-p - 3 !important;
+                        //line-height: normal !important;
+                    }
+                }
+            }
+            strong{
+                font-size: $font-p + 3 !important;
+            }
+        }
+        form{
+            .input{
+                select, input[type="date"]{
+                    background-size: 14px !important;                    
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                    appearance: none;
+                    background-position: 97% 50% !important;
+                }
+                .btnTooltip{
+                    width: 16px;
+                    height: 16px;
+                }
+                .boxSimulacion{
+                    p{
+                        font-size: $font-p + 4 !important;
+                        &:first-of-type{
+                            font-size: $font-p - 3 !important;
+                        }
+                    }
+                    .tooltip{
+                        p{
+                            font-size: $font-p - 2 !important; 
+                        }
+                    }
+                }
+                .dinamicCheckboxContainer{
+                    width: 100%;
+                }
+            } 
+        }
+        &.container-profile{
+            .info-first{
+                p{
+                    font-size: $font-p !important;
+                }
+            }
+        }
+    }
+
+    .contBtn{
+        .btnSuccess--regresar{
+            display: none;
+        }
+        .btnSuccess--omitir{
+            display: inline-block;
+        }
+        .btnSuccess{
+            &:nth-child(2){
+                //margin-left: 0;
+            }
+        }
+    }
+    
+    .btnBack{
+        display: flex;
+    }
+
+    .contBox{
+        padding: 16px;
+        background-color: $blanco-f8;
+        box-shadow: 1px 3px 5px lighten($negro-00, 70%);
+    }
+    .container{
+        &.container-encuesta{
+            .encuesta-riesgo{
+                .tabs{
+                    a{
+                        span{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        &.container-resultado-encuesta{
+            .container-table{
+                .header{
+                    display: none !important;
+                }
+                .body{
+                    width: 100%;
+                    .fila{
+                        width: 100%;
+                        display: inline-block;
+                        margin-bottom: 10px;
+                        border-radius: 6px;
+                        overflow: hidden;
+                        //flex-direction: column;
+                        &:last-of-type{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                .content{
+                    width: 100% !important;
+                    padding: 0 !important;
+                    vertical-align: top;
+                    &:nth-child(1), &:nth-child(2){
+                        width: 50% !important;
+                    }
+                    &:nth-child(1){
+                        .mobile-title{
+                            border-right: 1px solid #fff;
+                        }
+                    }
+                    &:last-of-type{
+                        padding: 10px !important;
+                        .mobile-title{
+                            background-color: inherit;
+                            color: $negro-57;
+                            padding: 0;
+                        }
+                        span{
+                            padding: 0;
+                        }
+                    }
+                    &.center{
+                        text-align: left !important;
+                    }
+                    .mobile-title{
+                        display: inline-block !important;
+                        padding: 10px;
+                        background-color: $gris-cc;
+                        color: $negro-57;
+                    }
+                    span{
+                        padding: 10px;
+                        display: inline-block;
+                        width: 100%;
+                    }
+                }
+            }
+
+            .resultado{
+                .perfil, .puntaje{
+                    width: 100%;
+                    strong{
+                        border-bottom: 1px solid #fff;
+                    }
+                }
+            }
+        }
+        &.containerConfir{
+            .resultConfir{
+                .result{
+                    span{
+                        &.small{
+                            font-size: $font-p - 2 !important;
+                            strong{
+                                font-size: $font-p - 2 !important;
+                            }
+                        }
+                    }
+                    &.whiteCompraCartera{
+                        background-color: #fff;
+                        strong{
+                            font-size: $font-h !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .modal-content {
+        .modal-body{
+           p{
+               strong{
+                   font-size: $font-p + 2 !important;
+               }
+            }
+        }
+    }
+
+    .contTextInformation{
+        .text-description{
+            font-size: $font-p - 2 !important;
+            line-height: $font-p;
+            strong{
+                font-size: $font-p - 2 !important;
+            }
+            &.textBig{
+                strong{
+                    font-size: $font-p !important;
+                }
+            }
+        }
+    }
+
+    .contStudyProcess{
+        .titleStudyProcess {
+            font-size: $font-p + 4 !important;
+        }
+    }
+
+    .contMainApp{
+        h1, h2{
+            &.main{
+                font-size: $font-p + 2 !important;
+            }
+            &.main-normal{
+                font-size: $font-p !important;
+            }
+            &.centerLeftMobile{
+                text-align: left;
+            }
+        }
+    }
+
+    .contCanguroMain{
+        .containerCanguro{
+            .header{
+                .title{
+                    h2{
+                        font-size: $font-p + 2 !important;
+                    }
+                }
+            }
+            h2.title-main{
+                font-size: $font-p + 2 !important;
+            }
+        }
+    }
+
+    .inputSlider{
+        span, strong{
+            font-size: $font-p - 2 !important;
+        }
+    }
+
+    .btnDownload, .titleDownload{
+        padding: 16px;
+        background-color: #F8F8F8;
+        box-shadow: 1px 3px 5px $gris-cc;
+    }
+
+    .pictureArea{
+        .mobileObject{
+            display: inline-block;
+        }
+        .desktopObjetct{
+            display: none;
+        }
+        .contBtnActionInvoice{
+            justify-content: space-between;
+            .btnActionInvoice{
+                p{
+                    font-size: $font-p - 2 !important;
+                }
+            }
+        }
+    }
+    .contPhotoUser{
+        .PhotoBody{
+            margin: 0 5px;
+            .contBtns{
+                button{
+                    p{
+                        font-size: 12px !important;
+                    }
+                }
+            }
+        }
+        .PhotoBodyNew{
+            .addPage{
+                box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+                background-color: rgba(255, 255, 255, .5);
+                p{
+                    font-size: 9px !important;
+                }
+            }
+        }
+    }
+
+    .canguroLite{
+        span{
+            font-size: $font-p - 2 !important;
+        }
+        strong{
+            font-size: $font-h !important;
+        }
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 45em) {
+    body{
+//        background-color: rgba(255, 127, 166, 0.62);
+    }
+    
+}
+
+/* Mobile - Landscape*/
+@media (max-width: 43em) and (orientation: landscape) {
+    body{
+//        background-color: yellowgreen;
+    }
+}
+
+/* ----------- iPhone 4 and 4S ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2){
+
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2){
+    
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2){
+    br{
+        display: inline-block;
+    }
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3){
+    
+}
+
+/* ----------- iPhone X ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3){
+    
+}
+
+
+//Casos especiales
+@media (max-width: 372px){
+    .container{
+        &.container-resultado-encuesta{
+            .container-table{
+                .content{
+                    &:first-of-type{
+                        .mobile-title{
+                            display: inline-block !important;
+                            padding: 20.5px !important;  
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 372px){
+    .modal-content {
+        .contBtn{
+           .btnSuccess{
+                margin-bottom: 0;
+                font-size: $font-p;
+                padding: 9px;
+                &:nth-child(2){
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 470px){
+    .btnSuccess{
+        font-size: 4vw;
+        &.big{
+            font-size: 4vw;
+        }
+    }
+
+    .containerCanguro{
+        .contBtn{
+            .btnSuccess{
+                margin: 20px 4px;
+            }
+        }
+    }
+}
+

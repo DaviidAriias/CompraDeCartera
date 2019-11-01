@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <!--  Default Styles  -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="../css/utils/rangeSlider/rangeslider.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title> Davivienda S.A. </title>
+</head>
+
+<body>
+    <section class="contMainApp gray">
+        <a href="javascript:void(0)" class="btnBack">
+            <img src="../images/icon-dv-btnback.svg" alt="Atrás">
+            Atrás
+        </a>
+
+        <!--dataNav inicio - clases: active y complete -->
+        <div class="contNavTracking">
+            <div class="dataNav tracking">
+                <div class="dataNav container">
+                    <a href="javascript:void(0)" class="dataNav step complete"></a>
+                    <a href="javascript:void(0)" class="dataNav step"></a>
+                    <a href="javascript:void(0)" class="dataNav step"></a>
+                    <a href="javascript:void(0)" class="dataNav step"></a>
+                </div>
+            </div>
+        </div>
+        <!-- dataNavn fin -->
+   
+        <div class="contBox">
+            <div class="container">
+                <h1 class="left no-mrgn-top">Indique los siguientes datos para continuar con la solicitud de su compra de cartera:</h1>
+                <form action="">
+                    <div class="input">
+                        <label for="ingresos">¿Cuál es el valor total de sus ingresos mensuales?</label>
+                        <div class="input">
+                            <input type="number" id="ingresos" value="" placeholder="">
+                            <a href="javascript:void(0)" class="btnTooltip"><img src="../images/icon-dv-asktooltip.svg" alt=""></a>
+                            <div class="tooltip">
+                                <p>
+                                    En este campo debe digitar el valor total de sus ingresos mensuales.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <label for="actividad-laboral">¿Cuál es su actividad laboral actual?</label>
+                        <select name="" id="actividad-laboral">
+                            <option value="-1" selected disabled>Seleccione una opción</option>
+                            <option value="1">Opción 1</option>
+                            <option value="2">Opción 2</option>
+                        </select>
+                    </div>
+                    <div class="input">
+                        <label for="nombre-empresa">¿Cuál es el nombre de su empresa?</label>
+                        <div class="input">
+                            <input type="text" id="nombre-empresa" value="" placeholder="">
+                        </div>
+                    </div>
+                    <div class="input">
+                        <label for="tipo-contrato">¿Qué tipo de contrato tiene?</label>
+                        <select name="" id="tipo-contrato">
+                            <option value="-1" selected disabled>Seleccione una opción</option>
+                            <option value="1">Opción 1</option>
+                            <option value="2">Opción 2</option>
+                        </select>
+                    </div>
+                    <div class="input">
+                        <label for="actividad-economica">¿Cuál es la actividad económica de su empresa?</label>
+                        <div class="input">
+                            <input type="text" id="actividad-economica" value="" placeholder="">
+                        </div>
+                    </div>
+                    <div class="input">
+                        <label for="ingresos-mensuales">¿Cuál es su ciudad de residencia?</label>
+                        <div class="input">
+                            <input type="number" id="ingresos-mensuales" value="" placeholder="">
+                        </div>
+                    </div>
+                    <div class="input default">
+                        <label for="address-dis">¿Cuál es su dirección de residencia?</label>
+                        <input type="text" id="address-dis" value="Carrera 9 # 116 -08, Bogotá" disabled>
+                        <a href="javascript:void(0)" title="Editar" class="btn-intern change-address"><img src="../images/icon-dv-edit.svg" alt="Editar"></a>
+                    </div>
+                    <div class="input altern no-padding" style="display: none;">
+                        <label for="address">¿Cuál es su dirección de residencia?</label>
+                        <div class="input-fluid">
+                            <select name="">
+                                <option value="-1" selected>Calle</option>
+                                <option value="1">Opción 1</option>
+                                <option value="2">Opción 2</option>
+                            </select>
+                            <input type="text" value="151">
+                            <span>#</span>
+                            <input type="text" value="13A">
+                            <input type="text" value="50">
+                        </div>
+                    </div>
+                    <div class="input altern no-padding" style="display: none;">
+                        <label for="add-address">Torre / Piso / Apartamento / Otro</label>
+                        <input type="text" id="add-address" value="">
+                    </div>
+                    <div class="input">
+                        <label for="num-ases">Si está recibiendo ayuda de un <strong>asesor del Banco</strong>, ingrese el código del asesor.</label>
+                        <div class="input">
+                            <input type="number" id="num-ases" value="" placeholder="Opcional">
+                            <a href="javascript:void(0)" class="btnTooltip"><img src="../images/icon-dv-asktooltip.svg" alt=""></a>
+                            <div class="tooltip">
+                                <p>
+                                    Si le prestaron asesoría, ingrese el código del asesor comercial que lo está ayudando con esta solicitud; de lo contrario, no diligencie este espacio.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+
+        <div class="contBtn">
+            <button type="button" class="btnSuccess btnSuccess--regresar">Regresar</button>
+            <button type="button" class="btnSuccess active" id="open_modal-cang">Continuar</button>
+        </div>
+    </section>
+
+    <section class="contCanguroMain" id="cont-canguro-main">
+        <div class="containerCanguro">
+            <div class="header">
+                <div class="title">
+                    <img src="../images/icon-dv-ProteccionPago.svg" alt="icon">
+                    <h2>Protección de pagos</h2>
+                </div>
+                <a href="javascript:void(0)" class="close-canguro" id="close-canguro"><img src="../images/icon-dv-close-canguro.svg" alt="Close"></a>
+            </div>
+            <div class="content">
+                <hr>
+                <h2 class="title-main">¿Quiere proteger sus pagos?</h2>
+                <p class="paragraph-canguro">Por <strong>$35.000 mensuales</strong>, adquiera el Seguro de Protección de pagos que cubre <strong>hasta 6 cuotas mensuales</strong> de su crédito en caso de:</p>
+                <div class="list">
+                    <div class="item">
+                        <img src="../images/icon-dv-list-canguro.svg" alt="">
+                        <p>Hospitalización mayor a 7 días.</p>
+                    </div>
+                    <div class="item">
+                        <img src="../images/icon-dv-list-canguro.svg" alt="">
+                        <p>Incapacidad temporal mayor a 15 días.</p>
+                    </div>
+                </div>
+                <p class="paragraph-canguro">Además, obtenga una tasa preferencial en su crédito del xx,xx% M.V. (xx,xx% E.A.).</p>
+                <hr>
+                <a href="javascript:void(0)" class="tyc-link">Ver Términos y Condiciones</a>
+                <div class="contBtn">
+                    <button type="button" class="btnSuccess close_modal-cang">Omitir</button>
+                    <button type="button" class="btnSuccess active">Adquirir</button>
+                </div>	
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

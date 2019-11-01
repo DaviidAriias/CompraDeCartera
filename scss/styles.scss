@@ -1,0 +1,30 @@
+/*---------------------------------------------------
+
+============ Main - Proyecto ============
+* Nombre del proyecto: -----
+* Nombre del archivo: styles.scss | styles.css
+* Descripción: Hoja de estilos principal, para el rediseño del App.
+* Autor: Movilidad y Canales Banco Davivienda - Cristian Arias
+---------------------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:300,400,500,700);
+
+@charset "UTF-8";
+
+@import 'admin/admin';
+///<reference path="_admin.scss" />
+
+@import 'admin/mixins';
+///<reference path="_mixins.scss" />
+
+//-------- Modulos principales - SCSS
+@import 'base/base';
+
+@import 'layout/layout';
+
+@import 'general/forms';
+
+@import 'general/confirmations';
+
+@import 'general/modales';
+
+@import 'breakpoints.scss';
