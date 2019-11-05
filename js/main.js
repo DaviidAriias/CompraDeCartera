@@ -26,12 +26,14 @@ function readyDoc(){
     //Canguro
     $('#open_modal-cang').click(function(){
         $('.contCanguroMain').addClass('is--ShowedCanguro');
-        $("html, body").animate({ 
-            scrollTop: $('html, body').get(0).scrollHeight 
-        }, 100); 
+        //$("html, body").animate({ 
+        //    scrollTop: $('html, body').get(0).scrollHeight 
+        //}, 100); 
+        $('body').css('overflowY','hidden');
     });
     $('.close_modal-cang').click(function(){
         $('.contCanguroMain').removeClass('is--ShowedCanguro');
+        $('body').css('overflowY','auto');
     });
 
 
