@@ -58,6 +58,10 @@ function readyDoc(){
         }
     }); 
 
+    $('.dinamicCheckboxContainer input[type="number"]').click(function(e) {
+        e.preventDefault();
+    });
+
     $('#checkbox2').on( 'change', function() {
         if( $(this).is(':checked') ) {
             $('.dinamicTwo').show();
