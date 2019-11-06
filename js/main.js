@@ -59,7 +59,7 @@ function readyDoc(){
     }); 
 
     $('.dinamicCheckboxContainer input[type="number"]').click(function(e) {
-        //e.preventDefault();
+        e.preventDefault();
     });
 
     $('#checkbox2').on( 'change', function() {
